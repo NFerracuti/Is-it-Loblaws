@@ -11,7 +11,10 @@ This application is designed to help Canadians identify the ownership of various
 
 ## Getting Started
 
-run `npm i` to install dependencies
+- run `npm i` to install dependencies
+- download the expo go app on your smartphone
+- from within the root directory, run npx epo start in your terminal
+- scan the QR code that appears in terminal from within the expo go app
 
 
 ## Built With
