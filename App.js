@@ -4,6 +4,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { StyleSheet, Text, View } from 'react-native';
 
 import Header from './src/Components/Header';
+import Footer from './src/Components/Footer';
+
 // import registerNNPushToken from 'native-notify';
 
 import Home from './src/screens/Home';
@@ -13,6 +15,7 @@ export default function App() {
     <View style={styles.container}>
       <Header />
       <Home />
+      <Footer />
     </View>
   );
 }

@@ -1,28 +1,33 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View, Image } from 'react-native';
 
 export default function Header() {
   return (
     <View style={styles.header}>
-      <Text style={styles.title}>Is It Loblaws? 🤔</Text>
+      <Image
+        style={styles.logo}
+        source={require('../images/grocery-store-logo.png')}
+        resizeMode="contain"
+      />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   header: {
-    height: 60,
-    paddingTop: 15,
-    backgroundColor: '#f3f3f3',
     width: '100%',
+    height: 100,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderBottomColor: 'black',
+    borderBottomWidth: 5,
+    backgroundColor: '#ffcb2d',
   },
-  title: {
-    textAlign: 'center',
-    color: '#333',
-    fontSize: 20,
-    fontWeight: 'bold',
-    paddingTop: 10,
-    paddingBottom: 10,
+  logo: {
+    width: 140,
+    height: 100,
+    marginRight: 7,
+    marginTop: 7,
   },
 });
-
