@@ -6,7 +6,7 @@ export default function Header() {
     <View style={styles.header}>
       <Image
         style={styles.logo}
-        source={require('../images/grocery-store-logo.png')}
+        source={require('../images/grocerlogo.png')}
         resizeMode="contain"
       />
     </View>

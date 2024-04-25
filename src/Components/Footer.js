@@ -1,7 +1,29 @@
-import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity, Linking, Alert, Image } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, Text, View, TouchableOpacity, Linking, Alert, Image, Keyboard } from 'react-native';
 
 export default function Footer() {
+  const [keyboardStatus, setKeyboardStatus] = useState(false);
+
+  useEffect(() => {
+    const keyboardDidShowListener = Keyboard.addListener(
+      'keyboardDidShow',
+      () => {
+        setKeyboardStatus(true);
+      }
+    );
+    const keyboardDidHideListener = Keyboard.addListener(
+      'keyboardDidHide',
+      () => {
+        setKeyboardStatus(false);
+      }
+    );
+
+    return () => {
+      keyboardDidHideListener.remove();
+      keyboardDidShowListener.remove();
+    };
+  }, []);
+
   const toReddit = async () => {
     const url = 'https://www.reddit.com/r/loblawsisoutofcontrol/';
     // Checking if the link is supported for links with custom URL scheme.
@@ -29,6 +51,10 @@ export default function Footer() {
       Alert.alert(`Don't know how to open this URL: ${url}`);
     }
   };
+
+  if (keyboardStatus) {
+    return null;
+  }
 
   return (
     <View style={styles.footer}>

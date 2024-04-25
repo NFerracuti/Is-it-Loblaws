@@ -1,28 +1,26 @@
-export const getStoreOwner = (brand) => {
-  const brandOwners = {
-    "No Frills": "Loblaws",
-    "Real Canadian Superstore": "Loblaws",
-    "Maxi": "Loblaws",
-    "Extra Foods": "Loblaws",
-    "Independent Grocer": "Loblaws",
-    "Zehrs": "Loblaws",
-    "Valu-mart": "Loblaws",
-    "Fortinos": "Loblaws",
-    "Atlantic Superstore": "Loblaws",
-    "Loblaws": "Loblaws",
-    "Provigo": "Loblaws",
-    "City Market": "Loblaws",
-    "Dominion": "Loblaws",
-    "Food Basics": "Metro",
-    "Super C": "Metro",
-    "Marché Richelieu": "Metro",
-    "Les 5 Saisons": "Metro",
-    "Marché Ami": "Metro",
-    "The Barn Markets": "Metro"
-  };
+const sobeysBrands = [
+  "Big 8 Beverages",
+  "Farm Boy",
+  "Foodland",
+  "Freshco / Chalo! FreshCo",
+  "IGA / IGA Extra",
+  "Lawtons",
+  "Marché Bonichoix",
+  "Marché Tradition",
+  "Boni-Soir",
+  "Dépanneur Voisin",
+  "Needs Convenience",
+  "Pete's Frootique",
+  "Rachelle-Béry",
+  "Safeway",
+  "Sobeys / Sobeys Extra",
+  "Thrifty Foods",
+  "Sobeys Liquor",
+  "Safeway Liquor",
+  "Thrifty Foods Liquor",
+  "Voilà"
+];
 
-  return brandOwners[brand];
-};
 
 const loblawsBrands = [
   "No Frills",
@@ -37,10 +35,28 @@ const loblawsBrands = [
   "Loblaws",
   "Provigo",
   "City Market",
-  "Dominion"
+  "Dominion",
+  "Atlantic Cash & Carry",
+  "Axep",
+  "Bloor Street Market",
+  "Les Entrepôts Presto",
+  "Freshmart",
+  "L'Intermarché",
+  "Lucky Dollar Foods",
+  "Maxi / Maxi & Cie",
+  "NG Cash & Carry",
+  "Shop Easy Foods",
+  "Shoppers Drug Mart",
+  "Pharmaprix",
+  "SuperValu",
+  "T & T Supermarket",
+  "Wholesale Club",
+  "Club Entrepôt",
+  "Independent CityMarket",
 ];
 
 const metroBrands = [
+  "Metro",
   "Food Basics",
   "Super C",
   "Marché Richelieu",
@@ -49,8 +65,71 @@ const metroBrands = [
   "The Barn Markets"
 ];
 
-export const allBrands = [...loblawsBrands, ...metroBrands];
+export const allBrands = [...loblawsBrands, ...metroBrands, ...sobeysBrands];
 
 export const getFilteredBrands = (search) => {
   return allBrands.filter(brand => brand.toLowerCase().includes(search.toLowerCase()));
+};
+
+export const getStoreOwner = (brand) => {
+  const brandOwners = {
+    "Atlantic Cash & Carry": "Loblaws",
+    "Axep": "Loblaws",
+    "Bloor Street Market": "Loblaws",
+    "Les Entrepôts Presto": "Loblaws",
+    "Freshmart": "Loblaws",
+    "L'Intermarché": "Loblaws",
+    "Lucky Dollar Foods": "Loblaws",
+    "Maxi / Maxi & Cie": "Loblaws",
+    "NG Cash & Carry": "Loblaws",
+    "Shop Easy Foods": "Loblaws",
+    "Shoppers Drug Mart": "Loblaws",
+    "Pharmaprix": "Loblaws",
+    "SuperValu": "Loblaws",
+    "T & T Supermarket": "Loblaws",
+    "Wholesale Club / Club Entrepôt": "Loblaws",
+    "Your Independent Grocer / Independent CityMarket": "Loblaws",
+    "No Frills": "Loblaws",
+    "Real Canadian Superstore": "Loblaws",
+    "Maxi": "Loblaws",
+    "Extra Foods": "Loblaws",
+    "Independent Grocer": "Loblaws",
+    "Zehrs": "Loblaws",
+    "Valu-mart": "Loblaws",
+    "Fortinos": "Loblaws",
+    "Atlantic Superstore": "Loblaws",
+    "Loblaws": "Loblaws",
+    "Provigo": "Loblaws",
+    "City Market": "Loblaws",
+    "Dominion": "Loblaws",
+    "Metro": "Metro",
+    "Food Basics": "Metro",
+    "Super C": "Metro",
+    "Marché Richelieu": "Metro",
+    "Les 5 Saisons": "Metro",
+    "Marché Ami": "Metro",
+    "The Barn Markets": "Metro",
+    "Big 8 Beverages": "Sobeys",
+    "Farm Boy": "Sobeys (Empire Company)",
+    "Foodland": "Sobeys (Empire Company)",
+    "Freshco / Chalo! FreshCo": "Sobeys (Empire Company)",
+    "IGA / IGA Extra": "Sobeys (Empire Company)",
+    "Lawtons": "Sobeys (Empire Company)",
+    "Marché Bonichoix": "Sobeys (Empire Company)",
+    "Marché Tradition": "Sobeys (Empire Company)",
+    "Boni-Soir": "Sobeys (Empire Company)",
+    "Dépanneur Voisin": "Sobeys (Empire Company)",
+    "Needs Convenience": "Sobeys (Empire Company)",
+    "Pete's Frootique": "Sobeys (Empire Company)",
+    "Rachelle-Béry": "Sobeys (Empire Company)",
+    "Safeway": "Sobeys (Empire Company)",
+    "Sobeys / Sobeys Extra": "Sobeys (Empire Company)",
+    "Thrifty Foods": "Sobeys (Empire Company)",
+    "Sobeys Liquor": "Sobeys (Empire Company)",
+    "Safeway Liquor": "Sobeys (Empire Company)",
+    "Thrifty Foods Liquor": "Sobeys (Empire Company)",
+    "Voilà": "Sobeys (Empire Company)",
+  };
+
+  return brandOwners[brand];
 };
