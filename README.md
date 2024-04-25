@@ -1,4 +1,5 @@
-# Canadian Grocery Store Ownership App
+# Who's That Grocery Store!?
+### A Canadian Grocery Store Ownership App
 
 This application is designed to help Canadians identify the ownership of various grocery stores across the country. Given the oligopolistic nature of the Canadian grocery industry, this app aims to provide transparency and awareness about who owns what.
 
