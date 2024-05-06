@@ -30,4 +30,4 @@ This application is designed to help Canadians identify the ownership of various
 ## Acknowledgments
 
 * Celiapp Team
-* LoblawsIsOutOFControl Community
+* LoblawsIsOutOfControl Community
