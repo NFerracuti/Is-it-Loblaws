@@ -87,7 +87,15 @@ const pattisonBrands = [
 const DollaramaBrands = ["Dollarama"];
 const IKEABrands = ["IKEA"];
 const JeanCoutuBrands = ["Jean Coutu"];
-const CanadianTireBrands = ["Canadian Tire"];
+const CanadianTireBrands = [
+  "Canadian Tire",
+  "PartSource",
+  "Sport Chek",
+  "Mark's",
+  "Helly Hansen",
+  "Party City Canada",
+  "Sher-Wood"
+];
 const LondonDrugsBrands = ["London Drugs"];
 const WholeFoodsBrands = ["Whole Foods"];
 const PusaterisBrands = ["Pusateri's"];
@@ -198,6 +206,12 @@ export const getStoreOwner = (brand) => {
     "IKEA": "IKEA",
     "Jean Coutu": "Jean Coutu",
     "Canadian Tire": "Canadian Tire",
+    "PartSource": "Canadian Tire",
+    "Sport Chek": "Canadian Tire",
+    "Mark's": "Canadian Tire",
+    "Helly Hansen": "Canadian Tire",
+    "Party City Canada": "Canadian Tire",
+    "Sher-Wood": "Canadian Tire",
     "London Drugs": "London Drugs",
     "Whole Foods": "Whole Foods",
     "Pusateri's": "Pusateri's",
