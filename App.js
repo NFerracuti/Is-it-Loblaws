@@ -31,6 +31,7 @@ export default function App() {
     );
   }
 
+
   return (
     <KeyboardAvoidingView
       behavior={Platform.OS === "ios" ? "padding" : "height"}
